@@ -1,0 +1,7 @@
+-- 03-a-0200
+
+Сортирайте /etc/passwd лексикографски по поле UserID.
+
+sort -t ':' -k 3 /etc/passwd
+
+cat /etc/passwd | sort -t ':' -k 3
