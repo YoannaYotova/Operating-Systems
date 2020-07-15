@@ -1,0 +1,5 @@
+-- 03-b-0300
+
+Намерете факултетния си номер във файлa /etc/passwd.
+
+grep 'Yoanna Yotova' /etc/passwd | cut -d':' -f1 | tail -c 6

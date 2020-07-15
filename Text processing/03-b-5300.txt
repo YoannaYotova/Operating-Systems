@@ -1,0 +1,11 @@
+-- 03-b-5300
+
+Намерете броя на уникалните символи, използвани в имената на потребителите от /etc/passwd.
+
+cat /etc/passwd | cut -d':' -f1| grep -o .|sort | uniq -u | wc -l
+
+# uniq - u -> print only uniq lines
+# grep -o [pattern]-> Print  only  the  matched  (non-empty) parts of a matching line,
+             with each such part on a separate output line.
+
+
