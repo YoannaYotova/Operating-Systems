@@ -1,0 +1,5 @@
+-- 03-b-9052
+
+Използвайки файл population.csv, намерете през коя година в България има най-много население.
+
+ cat population.csv | grep $(cat population.csv | grep -i 'Bulgaria' | cut -d ',' -f4 | sort -nr | head -n 1) | cut -d

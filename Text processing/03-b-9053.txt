@@ -1,0 +1,12 @@
+-- 03-b-9053
+
+Използвайки файл population.csv, намерете коя държава има най-много население през 2016. А коя е с най-малко население?
+(Hint: Погледнете имената на държавите)
+
+# replace-ваме годината с :
+cat population.csv | grep ',2016,' | sed -r "s/^(.*),.+,([0-9]+)$/\1:\2/" | sort -nr -t ':' -k 2 | head -n1 
+
+cat population.csv | grep ',2016,' | sed -r "s/^(.*),.+,([0-9]+)$/\1:\2/" | sort -n -t ':' -k 2 | head -n1 
+
+# cat population.csv | grep $(cat population.csv | grep ',2016,' | cut -d ',' -f4 | sort -nr | head -n 1) | awk -F ',' '{print $1}'
+
