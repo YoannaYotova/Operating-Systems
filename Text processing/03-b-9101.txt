@@ -1,0 +1,6 @@
+-- 03-b-9101
+
+Да се разархивира архивът songs.tar.gz в папка songs във вашата home директорията.
+
+tar -xzvf songs.tar.gz -C ~/songs
+

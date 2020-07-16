@@ -1,0 +1,9 @@
+-- 03-b-9105
+
+Да се преброят/изведат само песните на Beatles и Pink.
+
+ls songs | egrep '('Beatles'|'Pink')'
+
+ls songs | egrep '('Beatles'|'Pink')'|wc -l
+
+
